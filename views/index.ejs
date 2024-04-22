@@ -1,1 +1,125 @@
-<h1>lsadkjfdskf</h1>
+<%layout("/layouts/boilerplate.ejs")%>
+<div class="big-div-home">
+  <div id="blob"></div>
+  <div id="blur">
+    <div class="homeFirst">
+      <div class="homeFirstLeft">
+        <div>
+          <h1 class="companyname">Blue Fox</h1>
+          <h4>
+            The Best Advertising & Marketing Firm of
+            <span style="font-family: Lobster Two; font-size: larger"
+              >Jodhpur.</span
+            >
+          </h4>
+        </div>
+        <div class="belowCompanyName">
+          <h1>
+            We Solemnly make you heard <br />
+            'Louder' in RJ19
+          </h1>
+          <br />
+          <p>Roaring the loudest on RJ19's Roads, We make You Visible !</p>
+        </div>
+      </div>
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide carousel-fade homeFirstRight"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://res.cloudinary.com/ddxv0iwcs/image/upload/v1713799711/WhatsApp_Image_2024-04-03_at_13.09.54_es9ctb.jpg"
+              loading="lazy"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://res.cloudinary.com/ddxv0iwcs/image/upload/v1713799711/WhatsApp_Image_2024-04-03_at_13.09.55_pd5bpi.jpg"
+              loading="lazy"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://res.cloudinary.com/ddxv0iwcs/image/upload/v1713799711/WhatsApp_Image_2024-04-03_at_13.09.54_2_kqpsy4.jpg"
+              loading="lazy"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://res.cloudinary.com/ddxv0iwcs/image/upload/c_crop,w_20000,h_800/v1713799711/WhatsApp_Image_2024-04-03_at_13.09.54_1_lymro3.jpg"
+              loading="lazy"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://res.cloudinary.com/ddxv0iwcs/image/upload/v1713799711/WhatsApp_Image_2024-04-03_at_13.09.55_1_nehvfo.jpg"
+              loading="lazy"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://res.cloudinary.com/ddxv0iwcs/image/upload/v1713799712/WhatsApp_Image_2024-04-03_at_13.09.56_kzof9x.jpg"
+              loading="lazy"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://res.cloudinary.com/ddxv0iwcs/image/upload/v1713799712/WhatsApp_Image_2024-04-03_at_13.09.56_1_cdredy.jpg"
+              loading="lazy"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span> -->
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span> -->
+        </button>
+      </div>
+    </div>
+    <!-- <div class="homeSecond"></div> -->
+  </div>
+</div>
+
+<script>
+  document.addEventListener("mousemove", function (event) {
+    const blob = document.getElementById("blob");
+    const footer = document.getElementById("footer");
+    if (window.scrollY > 3800) {
+      blob.style.display = "none";
+    } else {
+      blob.style.display = "inline";
+    }
+    var mouseX = event.pageX;
+    var mouseY = event.pageY;
+
+    blob.animate(
+      {
+        left: mouseX - 25 + "px",
+        top: mouseY - 25 + "px",
+      },
+      { duration: 3000, fill: "forwards" }
+    );
+  });
+</script>

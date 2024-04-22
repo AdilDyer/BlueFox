@@ -1,0 +1,114 @@
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+#blob {
+  background-color: white;
+  height: 34vmax;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(68, 115, 255), rgb(255, 255, 255));
+  animation: rotate 10s infinite;
+  opacity: 0.8;
+  /* filter: blur(10rem); */
+  z-index: -100 !important;
+}
+
+#blur {
+  backdrop-filter: blur(12vmax);
+  background-color: rgba(0, 41, 77, 0.2);
+}
+
+nav {
+  font-family: "Lobster Two";
+  font-size: 1.2rem;
+  padding: 0 !important;
+}
+nav .container-fluid {
+  background-color: rgb(187, 201, 214);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 15px rgb(0, 0, 0, 0.1);
+  .nav-link {
+    margin-right: 1rem;
+    color: midnightblue;
+  }
+  .nav-link:hover {
+    color: brown;
+  }
+}
+
+.big-div-home {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.homeFirst {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeFirstLeft {
+  background-color: transparent;
+  color: rgb(12, 0, 119);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+
+  h1 {
+    font-family: "Lobster Two";
+  }
+  .companyname {
+    font-size: 10rem;
+    margin-top: 4rem;
+  }
+  .belowCompanyName {
+    margin-top: 5rem;
+  }
+}
+.homeFirstRight {
+  min-width: 40%;
+  max-width: 40%;
+  min-height: 100vh;
+}
+
+.homeFirstRight img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.homeSecond {
+  width: 100%;
+  height: 100vh;
+}
