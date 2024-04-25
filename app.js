@@ -90,3 +90,15 @@ app.listen(5000, () => {
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
+
+app.get("/contactus", (req, res) => {
+  res.render("contactus.ejs");
+});
+
+app.get("/getads", (req, res) => {
+  res.render("adoptions.ejs");
+});
+
+app.get("/login", (req, res) => {
+  res.render("login.ejs");
+});
