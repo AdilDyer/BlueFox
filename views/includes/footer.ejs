@@ -5,37 +5,109 @@
     <div class="wave" id="wave3"></div>
     <div class="wave" id="wave4"></div>
   </div>
-  <ul class="social-icon">
-    <li class="social-icon__item">
-      <a class="social-icon__link" href="#">
-        <ion-icon name="logo-facebook"></ion-icon>
-      </a>
-    </li>
-    <li class="social-icon__item">
-      <a class="social-icon__link" href="#">
-        <ion-icon name="logo-twitter"></ion-icon>
-      </a>
-    </li>
-    <li class="social-icon__item">
-      <a class="social-icon__link" href="#">
-        <ion-icon name="logo-linkedin"></ion-icon>
-      </a>
-    </li>
-    <li class="social-icon__item">
-      <a class="social-icon__link" href="#">
-        <ion-icon name="logo-instagram"></ion-icon>
-      </a>
-    </li>
-  </ul>
-  <ul class="menu">
-    <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
-    <li class="menu__item"><a class="menu__link" href="/#homefourth">About</a></li>
-    <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-    <li class="menu__item"><a class="menu__link" href="/team">Team</a></li>
-    <li class="menu__item"><a class="menu__link" href="/contactus">Contact</a></li>
-  </ul>
-  <p>All Rights Reserved.</p>
-  <p>&copy;2024 BlueFox Advertising</p>
+  <div class="footerdownbig">
+    <div class="downfooterleft">
+      <h1>BlueFox makes You Heard.</h1>
+      <div class="footlinks">
+        <br />
+        <a href="/" class="social-icon__link">Home</a>
+        <br /><br />
+        <a class="social-icon__link" href="/#homefourth">About Us</a>
+        <br /><br />
+        <a class="social-icon__link" href="/getads">Get Ads</a>
+        <br /><br />
+        <a class="social-icon__link" href="/contactus">Contact Us</a>
+        <br /><br />
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://m.facebook.com/people/Bluefox_advertisement/100054276020313/"
+          >
+            <ion-icon
+              name="logo-facebook"
+              id="logo-facebook"
+              style="color: dodgerblue"
+            ></ion-icon>
+          </a>
+        </li>
+        <!-- <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li> -->
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://www.instagram.com/bluefox_advertisement?igsh=bTU1ajdib2J3YzQ5"
+          >
+            <ion-icon
+              name="logo-instagram"
+              id="logo-instagram"
+              style="color: #e4405f"
+            ></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://wa.me/+919252180504?text=Hey BlueFox Team ! I would like to discuss about the Advertising packages and their plans."
+          >
+            <ion-icon
+              name="logo-whatsapp"
+              id="logo-instagram"
+              style="color: green"
+            ></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://www.youtube.com/@mohitbagaria5864"
+          >
+            <ion-icon
+              name="logo-youtube"
+              id="logo-instagram"
+              style="color: #ff0000"
+            ></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <br />
+
+      <p>All Rights Reserved.</p>
+      <p>&copy;2024 BlueFox Advertising</p>
+
+      <br />
+      <h6>
+        Made with <span style="color: red">&hearts;</span> by
+        <a
+          class="social-icon__link"
+          target="_blank"
+          href="https://www.linkedin.com/in/adildyer/"
+          style="text-decoration: none; color: red"
+          >Adil Dyer</a
+        >
+      </h6>
+    </div>
+    <div class="downfooterright">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5481.247826666981!2d73.02291081161009!3d26.216862891295676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418b005f321073%3A0xbef8fadb6e61b758!2sBLUE%20FOX%20ADVERTISING!5e0!3m2!1sen!2sin!4v1714031584426!5m2!1sen!2sin"
+        width="500"
+        height="500"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
 </footer>
 <script
   type="module"
@@ -59,13 +131,12 @@
     flex-direction: column;
   }
 
-  .social-icon,
-  .menu {
+  .social-icon {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin: 10px 0;
+    margin: 0px 0;
     flex-wrap: wrap;
     padding: 0;
   }
@@ -76,15 +147,19 @@
   }
 
   .social-icon__link {
-    font-size: 2rem;
+    font-size: 1.1rem;
     color: bisque;
-    margin: 0 10px;
+    margin-right: 20px;
 
     display: inline-block;
     transition: 0.5s;
   }
   .social-icon__link:hover {
     transform: translateY(-10px);
+  }
+  #logo-facebook,
+  #logo-instagram {
+    font-size: 2rem;
   }
 
   .menu__link {
@@ -162,6 +237,42 @@
     }
     100% {
       background-positon-x: 0px;
+    }
+  }
+
+  .footerdownbig {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35rem;
+    color: bisque;
+    text-shadow: 0 0 10px rgb(25, 25, 112, 1);
+    .downfooterleft {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to top,
+        rgb(32, 18, 37),
+        rgba(10, 10, 10, 0.2)
+      );
+      border-radius: 1rem;
+      padding: 3rem;
+      padding-bottom: 0;
+    }
+    .downfooterright {
+      iframe {
+        height: 30rem;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+    }
+    .footlinks a {
+      text-decoration: none;
+      color: bisque;
+    }
+    .link:hover {
+      transform: translateY(-10px);
     }
   }
 </style>

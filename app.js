@@ -12,7 +12,7 @@ const flash = require("connect-flash");
 const session = require("express-session");
 const dbUrl = process.env.ATLASDB_URL;
 const MongoStore = require("connect-mongo");
-
+const Query = require("./models/query");
 // const passport = require("passport");
 
 // const nodemailer = require("nodemailer");
@@ -99,6 +99,21 @@ app.get("/getads", (req, res) => {
   res.render("adoptions.ejs");
 });
 
-app.get("/login", (req, res) => {
-  res.render("login.ejs");
-});
+app.post(
+  "/admin",
+  wrapasync(async (req, res) => {
+    let newQuery = new Query(req.body);
+    await newQuery.save();
+
+    req.flash("success", "Your Query was Submitted Successfully !");
+    res.redirect("/contactus");
+  })
+);
+
+app.get(
+  `/admin/${process.env.ADMIN_PASSWORD}`,
+  wrapasync(async (req, res) => {
+    let allQueries = await Query.find({});
+    res.render("admin.ejs", { allQueries: allQueries });
+  })
+);

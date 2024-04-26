@@ -101,11 +101,14 @@ nav .container-fluid {
   }
   .companyname {
     font-size: 10rem;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    h5 {
+      padding-top: 1rem;
+    }
   }
   .belowCompanyName {
-    margin-top: 5rem;
+    margin-top: 3rem;
     text-shadow: 0px 0px 1px rgba(0, 127, 116, 0.3);
     h1 {
       text-shadow: 3px 2px 1px rgba(0, 127, 116, 0.3);
@@ -207,7 +210,8 @@ nav .container-fluid {
 
 @keyframes scrolling {
   0% {
-    transform: translateX(80%);
+    /* transform: translateX(80%); */
+    transform: translateX(0%);
   }
 
   100% {
@@ -302,8 +306,10 @@ nav .container-fluid {
 
 /* contactus  */
 .contactus {
-  height: 100vh;
-  padding: 5rem;
+  height: fit-content;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 5rem;
   background-color: rgba(66, 94, 255, 0.2);
   color: midnightblue;
   text-shadow: 0 0 5px rgb(25, 25, 112, 0.2);
@@ -337,6 +343,9 @@ nav .container-fluid {
   padding: 1rem;
   transition: 0.3s;
   cursor: pointer;
+  h1 {
+    padding: 0.5rem;
+  }
   img {
     width: 15rem;
     height: 15rem;
@@ -346,14 +355,18 @@ nav .container-fluid {
   }
 }
 
-/* login page  */
-.loginbigdiv {
+.admincontainer {
   min-height: 100vh;
-  text-align: center;
   padding: 5rem;
   background-color: rgba(66, 94, 255, 0.2);
   color: midnightblue;
   text-shadow: 0 0 5px rgb(25, 25, 112, 0.2);
+  .form-group {
+    padding: 3rem;
+    border: dashed purple thick;
+    margin: 5rem;
+    border-radius: 2rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -379,8 +392,12 @@ nav .container-fluid {
     justify-content: center;
   }
   .homeFirstLeft {
-    padding: 2rem;
+    padding: 1rem;
+
     text-align: center;
+    .companyname img {
+      width: 100%;
+    }
   }
   .homeFirstRight {
     min-width: 100%;
@@ -407,6 +424,22 @@ nav .container-fluid {
       padding: 0;
     }
   }
+
+  .footerdownbig {
+    flex-wrap: wrap !important;
+    height: 45rem !important;
+    .downfooterleft {
+      height: fit-content;
+    }
+    iframe {
+      width: 100%;
+      border-radius: 1rem;
+      margin-top: 4rem;
+      box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+      margin-bottom: 5rem;
+    }
+  }
+
   .contactus {
     padding: 3rem;
     height: fit-content;
@@ -416,12 +449,17 @@ nav .container-fluid {
     .col-md-7 {
       padding-top: 5rem;
       text-align: center;
-      padding-bottom: 10rem;
     }
   }
-  .loginbigdiv {
-    input {
-      width: 100% !important;
+  .admincontainer {
+    padding: 1rem;
+    padding-bottom: 15rem;
+    padding-top: 3rem;
+    .queryData {
+      margin: 0;
+      margin-top: 5rem;
+      padding: 2rem;
+      border-radius: 1rem;
     }
   }
 }
