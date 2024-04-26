@@ -371,10 +371,18 @@ nav .container-fluid {
 @media (min-width: 500px) and (max-width: 1230px) {
   .collapse {
     display: flex;
-    justify-content: end;
+    width: 100%;
+    justify-content: end !important;
   }
+
   .collapse ul {
     margin-right: 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    .nav-link {
+      margin-right: 0;
+    }
   }
   .companyname img {
     object-position: 0 -80px !important;
@@ -398,6 +406,7 @@ nav .container-fluid {
   }
   .nav-link {
     text-align: center;
+    margin-right: 0 !important;
   }
   .insideContainerFluid {
     width: 100%;
