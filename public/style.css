@@ -368,8 +368,31 @@ nav .container-fluid {
     border-radius: 2rem;
   }
 }
+@media (min-width: 500px) and (max-width: 1230px) {
+  .collapse {
+    display: flex;
+    justify-content: end;
+  }
+  .collapse ul {
+    margin-right: 0 !important;
+  }
+  .companyname img {
+    object-position: 0 -80px !important;
+    height: 500px;
+  }
+  .we-got {
+    padding-bottom: 0;
+  }
+  .we-got-cards,
+  .we-got {
+    height: fit-content;
+  }
+  .downfooterright {
+    width: 100%;
+  }
+}
 
-@media (max-width: 500px) {
+@media (max-width: 1230px) {
   nav .collapsediv {
     width: 100%;
   }
