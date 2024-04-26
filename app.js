@@ -117,3 +117,13 @@ app.get(
     res.render("admin.ejs", { allQueries: allQueries });
   })
 );
+
+app.get(
+  "/admin/delete/:queryId",
+  wrapasync(async (req, res) => {
+    let { queryId } = req.params;
+    await Query.deleteMany({ _id: queryId });
+    req.flash("success", "Query Deleted Successfully !");
+    res.redirect(`/admin/${process.env.ADMIN_PASSWORD}`);
+  })
+);
