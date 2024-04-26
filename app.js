@@ -104,7 +104,6 @@ app.post(
   wrapasync(async (req, res) => {
     let newQuery = new Query(req.body);
     await newQuery.save();
-
     req.flash("success", "Your Query was Submitted Successfully !");
     res.redirect("/contactus");
   })
